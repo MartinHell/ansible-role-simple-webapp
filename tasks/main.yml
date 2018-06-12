@@ -1,0 +1,22 @@
+---
+
+# Create the /var/www/ directories
+- name: Create /var/www/ directories
+  file:
+    path: /var/www/{{ item }}
+    state: directory
+    mode: 0755
+  with_items:
+    - "simpleapp"
+
+# Clone github repository
+- name: Clone github repository containing the simple php app
+  git:
+    repo: 'https://github.com/taniarascia/pdo.git'
+    dest: /var/www/simpleapp
+
+# Add config.php file
+- name: Use template to populate config.php
+  template:
+    src: config.php.j2
+    dest: /var/www/simpleapp/config.php

@@ -1,0 +1,6 @@
+---
+simpleapp_db_host: "localhost"
+simpleapp_db_user: "root"
+simpleapp_db_password: "root"
+simpleapp_db_dbname: "test"
+
