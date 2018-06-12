@@ -14,6 +14,7 @@
   git:
     repo: 'https://github.com/taniarascia/pdo.git'
     dest: /var/www/simpleapp
+    force: yes
 
 # Add config.php file
 - name: Use template to populate config.php
