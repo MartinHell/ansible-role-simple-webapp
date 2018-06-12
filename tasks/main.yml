@@ -20,3 +20,9 @@
   template:
     src: config.php.j2
     dest: /var/www/simpleapp/config.php
+
+# Add install.php file
+- name: Use template to populate install.php
+  template:
+    src: install.php.j2
+    dest: /var/www/simpleapp/install.php
